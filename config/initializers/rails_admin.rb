@@ -1,7 +1,6 @@
 RailsAdmin.config do |config|
 
-  config.current_user_method do 
-    current_admin_user
-  end
+  config.current_user_method { current_user } #auto-generated
+
 
 end

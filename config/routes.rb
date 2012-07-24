@@ -1,8 +1,10 @@
 Depot::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   devise_for :users
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
 
   # controller :sessions do
   #   get    'login'  => :new
