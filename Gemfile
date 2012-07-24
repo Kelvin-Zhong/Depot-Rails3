@@ -1,51 +1,44 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '3.1.0.rc6'
-gem 'json'
-gem 'sass'
-gem 'coffee-script'
-gem 'uglifier'
-# Rails 3.1 - JavaScript
-gem 'jquery-rails'
-
+gem 'rails', '~> 3.2.6'
+gem 'devise'
+gem 'rails_admin'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'rake', '~> 0.8.7'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'bootstrap-sass', '~> 2.0.4.0'
+  gem 'coffee-rails', '~> 3.2.1'
 
-# Use unicorn as the web server
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platforms => :ruby
+
+  gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails'
+
+group :development, :test do
+  gem 'mysql2'
+  gem 'sqlite3'
+  gem 'thin'
+end
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+# gem 'capistrano'
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-gem 'will_paginate', '>= 3.0.pre'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-
-# Rails Admin https://github.com/sferik/rails_admin
-gem 'fastercsv' # Only required on Ruby 1.8 and below, left in for fun
-gem 'devise' # Devise must be required before RailsAdmin
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-
-group :development, :test do
-  gem 'sqlite3'
-  gem 'RedCloth'
-end
-
-group :production do
-  gem 'mysql'
-end
+# To use debugger
+# gem 'debugger'
