@@ -17,3 +17,5 @@ rerun.txt
 pickle-email-*.html
 tags
 database.yml
+bin
+.bundle
